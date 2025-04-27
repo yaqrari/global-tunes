@@ -1,0 +1,65 @@
+/* Custom globe visualization styling */
+
+.earth-glow {
+  box-shadow: 0 0 50px 5px rgba(244, 63, 94, 0.15);
+  border-radius: 50%;
+}
+
+.hexbin-marker {
+  transition: all 0.5s ease-out;
+}
+
+.hexbin-marker:hover {
+  filter: brightness(1.3);
+}
+
+/* Custom animation for globe data points */
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+  }
+}
+
+.pulse-animation {
+  animation: pulse-glow 4s infinite ease-in-out;
+}
+
+/* Custom hexbin styling - these will be applied programmatically */
+.hex-top-highlight {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.hex-top-highlight:hover {
+  opacity: 1;
+}
+
+/* Color theme for popularity heatmap */
+.popularity-low {
+  color: rgba(252, 165, 165, 0.7); /* light red */
+}
+
+.popularity-medium {
+  color: rgba(244, 63, 94, 0.8); /* medium red */
+}
+
+.popularity-high {
+  color: rgba(225, 29, 72, 0.9); /* strong red */
+}
+
+/* Globe label styling */
+.globe-label {
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: white;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
